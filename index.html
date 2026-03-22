@@ -43,6 +43,27 @@
         </button>
         <p id="form-status" class="status" role="status" aria-live="polite"></p>
       </form>
+
+      <h2>Checkout Form (Intentional A11y Errors)</h2>
+      <form class="form" novalidate>
+        <div class="field">
+          <input type="text" name="cardholder" placeholder="Cardholder name" required />
+        </div>
+
+        <div class="field">
+          <input type="text" name="cardNumber" placeholder="Card number" autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <select>
+            <option value="">Select country</option>
+            <option value="us">United States</option>
+            <option value="co">Colombia</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="alert('Submitted')">Pay now</button>
+      </form>
     </main>
 
     <script src="./script.js"></script>
