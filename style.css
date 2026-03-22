@@ -87,3 +87,9 @@ button {
   margin: 0;
   color: var(--muted);
 }
+
+.help {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

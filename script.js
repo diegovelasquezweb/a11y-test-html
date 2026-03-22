@@ -1,4 +1,4 @@
-const form = document.getElementById("contact-form");
+const form = document.getElementById("signup-form");
 const status = document.getElementById("form-status");
 
 if (form instanceof HTMLFormElement && status instanceof HTMLElement) {
@@ -6,16 +6,14 @@ if (form instanceof HTMLFormElement && status instanceof HTMLElement) {
     event.preventDefault();
 
     const formData = new FormData(form);
-    const name = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
-    const message = String(formData.get("message") || "").trim();
 
-    if (!name || !email || !message) {
-      status.textContent = "Please complete all fields before sending.";
+    if (!email) {
+      status.textContent = "Please enter your email address.";
       return;
     }
 
-    status.textContent = "Message sent. Thank you!";
+    status.textContent = "Subscription received. Thank you!";
     form.reset();
   });
 }
