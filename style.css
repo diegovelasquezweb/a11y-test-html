@@ -68,7 +68,7 @@ textarea {
 input:focus,
 textarea:focus,
 button:focus {
-  outline: 3px solid rgba(15, 94, 201, 0.28);
+  outline: none;
   outline-offset: 2px;
 }
 
