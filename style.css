@@ -1,0 +1,89 @@
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --border: #d1d5db;
+  --primary: #0f5ec9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f8fbff 0%, #eef4ff 100%);
+  color: var(--text);
+}
+
+.page {
+  width: min(720px, 92%);
+  margin: 3rem auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(31, 41, 55, 0.08);
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+}
+
+.intro {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid rgba(15, 94, 201, 0.28);
+  outline-offset: 2px;
+}
+
+button {
+  border: 0;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.72rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 1.2rem;
+  margin: 0;
+  color: var(--muted);
+}
