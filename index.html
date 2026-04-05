@@ -5,30 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A11y Test Form</title>
     <link rel="stylesheet" href="./style.css" />
-    <style>
-      .skip-link {
-        position: absolute;
-        left: -9999px;
-        top: 0;
-        z-index: 9999;
-        padding: 8px 16px;
-        background: #000;
-        color: #fff;
-      }
-      .skip-link:focus {
-        left: 0;
-      }
-    </style>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <main class="page" id="main-content">
+    <main class="page">
       <h1>Contact Form</h1>
-      <p class="intro">Use this form to test accessibility checks.</p>
-      <p>
-        <a href="https://example.com" target="_blank">Read external form policy</a>
-      </p>
-      <img src="https://via.placeholder.com/300x80" />
+      <p class="intro">Use this form to get in touch.</p>
 
       <form id="contact-form" class="form" novalidate>
         <div class="field">
@@ -37,6 +18,7 @@
         </div>
 
         <div class="field">
+          <!-- Missing label: intentional a11y issue -->
           <input
             id="email"
             name="email"
@@ -53,31 +35,7 @@
         </div>
 
         <button type="submit">Send message</button>
-        <button type="button" onmouseover="this.textContent='Hover only action'">
-          Hover to preview
-        </button>
         <p id="form-status" class="status" role="status" aria-live="polite"></p>
-      </form>
-
-      <h2>Checkout Form (Intentional A11y Errors)</h2>
-      <form class="form" novalidate>
-        <div class="field">
-          <input type="text" name="cardholder" placeholder="Cardholder name" required />
-        </div>
-
-        <div class="field">
-          <input type="text" name="cardNumber" placeholder="Card number" autocomplete="off" />
-        </div>
-
-        <div class="field">
-          <select>
-            <option value="">Select country</option>
-            <option value="us">United States</option>
-            <option value="co">Colombia</option>
-          </select>
-        </div>
-
-        <button type="button" onclick="alert('Submitted')">Pay now</button>
       </form>
     </main>
 
