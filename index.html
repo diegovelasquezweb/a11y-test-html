@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main class="page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <main id="main-content" class="page">
       <h1>Contact Form</h1>
       <p class="intro">Use this form to test accessibility checks.</p>
 
@@ -17,6 +19,7 @@
           <input id="name" name="name" type="text" autocomplete="name" required />
         </div>
 
+        <!-- Error 1: input with placeholder as only label -->
         <div class="field">
           <input
             id="email"
@@ -28,12 +31,23 @@
           />
         </div>
 
+        <!-- Error 2: select with no label -->
+        <div class="field">
+          <select id="topic" name="topic">
+            <option value="">Choose a topic</option>
+            <option value="support">Support</option>
+            <option value="sales">Sales</option>
+          </select>
+        </div>
+
         <div class="field">
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
-        <button type="submit">Send message</button>
+        <!-- Error 3: button with no accessible name -->
+        <button type="submit"><span aria-hidden="true">→</span></button>
+
         <p id="form-status" class="status" role="status" aria-live="polite"></p>
       </form>
     </main>
