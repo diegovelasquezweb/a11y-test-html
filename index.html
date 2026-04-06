@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A11y Test Form</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
   </head>
   <body>
-    <main class="page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main class="page" id="main-content">
       <h1>Contact Form</h1>
       <p class="intro">Use this form to test accessibility checks.</p>
 
       <!-- Error 1: image missing alt -->
-      <img src="https://placehold.co/200x100" />
+      <img src="https://placehold.co/200x100" alt="Placeholder image" />
 
       <form id="contact-form" class="form" novalidate>
         <div class="field">
@@ -22,6 +38,7 @@
 
         <!-- Error 2: input with placeholder as only label (DOM + source pattern) -->
         <div class="field">
+          <label for="email">Email address</label>
           <input
             id="email"
             name="email"
@@ -32,9 +49,10 @@
           />
         </div>
 
-        <!-- Error 3: select with no label -->
+        <!-- Error 3: select with accessible name -->
         <div class="field">
-          <select id="topic" name="topic">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" aria-label="Topic">
             <option value="">Choose a topic</option>
             <option value="support">Support</option>
             <option value="sales">Sales</option>
@@ -47,7 +65,7 @@
         </div>
 
         <!-- Error 4: button with no accessible name -->
-        <button type="submit"><span aria-hidden="true">→</span></button>
+        <button type="submit">Submit form</button>
 
         <p id="form-status" class="status" role="status" aria-live="polite"></p>
       </form>
