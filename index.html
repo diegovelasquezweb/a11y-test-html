@@ -12,7 +12,7 @@
       <p class="intro">Use this form to test accessibility checks.</p>
 
       <!-- Error 1: image missing alt -->
-      <img src="https://placehold.co/200x100" />
+      <img src="https://placehold.co/200x100" alt="Placeholder image" />
 
       <form id="contact-form" class="form" novalidate>
         <div class="field">
@@ -22,18 +22,19 @@
 
         <!-- Error 2: input with placeholder as only label (DOM + source pattern) -->
         <div class="field">
+          <label for="email">Email address</label>
           <input
             id="email"
             name="email"
             type="email"
             autocomplete="email"
-            placeholder="Email address"
             required
           />
         </div>
 
         <!-- Error 3: select with no label -->
         <div class="field">
+          <label for="topic">Topic</label>
           <select id="topic" name="topic">
             <option value="">Choose a topic</option>
             <option value="support">Support</option>
@@ -47,7 +48,7 @@
         </div>
 
         <!-- Error 4: button with no accessible name -->
-        <button type="submit"><span aria-hidden="true">→</span></button>
+        <button type="submit">Send form</button>
 
         <p id="form-status" class="status" role="status" aria-live="polite"></p>
       </form>
