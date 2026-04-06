@@ -21,18 +21,19 @@
 
         <!-- Error 1: input with placeholder as only label -->
         <div class="field">
+          <label for="email">Email address</label>
           <input
             id="email"
             name="email"
             type="email"
             autocomplete="email"
-            placeholder="Email address"
             required
           />
         </div>
 
         <!-- Error 2: select with no label -->
         <div class="field">
+          <label for="topic">Topic</label>
           <select id="topic" name="topic">
             <option value="">Choose a topic</option>
             <option value="support">Support</option>
@@ -46,7 +47,7 @@
         </div>
 
         <!-- Error 3: button with no accessible name -->
-        <button type="submit"><span aria-hidden="true">→</span></button>
+        <button type="submit">Submit</button>
 
         <p id="form-status" class="status" role="status" aria-live="polite"></p>
       </form>
