@@ -17,6 +17,7 @@
           <input id="name" name="name" type="text" autocomplete="name" required />
         </div>
 
+        <!-- Placeholder as only label (triggers PAT-* source finding) -->
         <div class="field">
           <input
             id="email"
@@ -28,12 +29,23 @@
           />
         </div>
 
+        <!-- Select with no label (triggers DOM findings) -->
+        <div class="field">
+          <select id="topic" name="topic">
+            <option value="">Choose a topic</option>
+            <option value="support">Support</option>
+            <option value="sales">Sales</option>
+          </select>
+        </div>
+
         <div class="field">
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
-        <button type="submit">Send message</button>
+        <!-- No accessible name (triggers DOM finding) -->
+        <button type="submit"><span aria-hidden="true">→</span></button>
+
         <p id="form-status" class="status" role="status" aria-live="polite"></p>
       </form>
     </main>
