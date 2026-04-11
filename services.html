@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
   </head>
   <body>
-    <main class="page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main class="page" id="main-content">
       <h1>Services</h1>
       <p class="intro">We offer accessibility audits, remediation, and training for development teams.</p>
       <ul>
