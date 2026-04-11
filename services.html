@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -14,7 +29,7 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <main class="page">
+    <main id="main-content" class="page">
       <h1>Services</h1>
       <p class="intro">We offer accessibility audits, remediation, and training for development teams.</p>
 
@@ -25,9 +40,9 @@
         <li>Ongoing Monitoring</li>
       </ul>
 
-      <img src="services.png" />
+      <img src="services.png" alt="Team collaborating on accessibility audit documentation" />
 
-      <button><span aria-hidden="true">★</span></button>
+      <button aria-label="Add to favorites"><span aria-hidden="true">★</span></button>
     </main>
   </body>
 </html>
