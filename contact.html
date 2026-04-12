@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
   </head>
   <body>
     <nav aria-label="Primary">
@@ -17,9 +30,10 @@
       <h1>Contact Us</h1>
       <form>
         <!-- DOM error: input without associated label -->
-        <input type="email" placeholder="Your email" />
+        <label for="email-input" class="sr-only">Your email</label>
+        <input id="email-input" type="email" placeholder="Your email" />
         <!-- DOM error: button without accessible name -->
-        <button><span aria-hidden="true">→</span></button>
+        <button aria-label="Submit"><span aria-hidden="true">→</span></button>
       </form>
     </main>
     <script src="./script.js"></script>
