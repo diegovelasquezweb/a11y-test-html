@@ -18,10 +18,10 @@
       <p>We offer accessibility audits, remediation, and training.</p>
 
       <!-- PAT: mouseover-without-focus — no onFocus equivalent -->
-      <div onMouseOver="showTooltip(this)" style="display:inline-block; padding: 8px; background: #eee;">Hover for info</div>
+      <div onMouseOver="showTooltip(this)" onFocus="showTooltip(this)" onBlur="hideTooltip(this)" style="display:inline-block; padding: 8px; background: #eee;" tabindex="0">Hover for info</div>
 
-      <!-- PAT: character-key-shortcut — single-character accesskey -->
-      <button accesskey="s" type="button">Save</button>
+      <!-- PAT: character-key-shortcut — single-character accesskey (FIXED: removed accesskey) -->
+      <button type="button">Save</button>
 
       <!-- DOM: button without accessible name -->
       <button type="button"><span aria-hidden="true">★</span></button>

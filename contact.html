@@ -16,19 +16,20 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
       <form>
-        <!-- PAT: placeholder-only-label — no associated label -->
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" />
+        
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" />
 
-        <!-- DOM: select without label -->
-        <select>
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
           <option value="">Choose a topic</option>
           <option value="support">Support</option>
           <option value="sales">Sales</option>
         </select>
 
-        <!-- DOM: button without accessible name -->
-        <button type="submit"><span aria-hidden="true">→</span></button>
+        <button type="submit" aria-label="Send message"><span aria-hidden="true">→</span></button>
       </form>
     </main>
     <script src="./script.js"></script>
