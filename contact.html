@@ -9,18 +9,19 @@
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
     <nav aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+      <a href="index.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Home</a>
+      <a href="about.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">About</a>
+      <a href="services.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
     <main id="main" class="page">
       <h1>Contact Us</h1>
       <form>
         <!-- DOM error: input without associated label -->
-        <input type="email" placeholder="Your email" />
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Your email" aria-label="Email" />
         <!-- DOM error: button without accessible name -->
-        <button><span aria-hidden="true">→</span></button>
+        <button aria-label="Submit" style="min-width: 44px; min-height: 44px;"><span aria-hidden="true">→</span></button>
       </form>
     </main>
     <script src="./script.js"></script>
