@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -17,7 +33,7 @@
       <h1>Contact Us</h1>
       <form>
         <label for="email">Your email</label>
-        <input id="email" type="email" placeholder="name@example.com" />
+        <input id="email" type="email" placeholder="name@example.com" aria-describedby="email-hint" />
         <button type="submit">Send</button>
       </form>
     </main>
