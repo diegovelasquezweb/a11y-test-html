@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -17,9 +33,10 @@
       <h1>Contact Us</h1>
       <form>
         <!-- DOM error: input without associated label -->
-        <input type="email" placeholder="Your email" />
+        <label for="email">Your email</label>
+        <input id="email" type="email" placeholder="Your email" aria-label="Your email" />
         <!-- DOM error: button without accessible name -->
-        <button><span aria-hidden="true">→</span></button>
+        <button aria-label="Send"><span aria-hidden="true">→</span></button>
       </form>
     </main>
     <script src="./script.js"></script>
