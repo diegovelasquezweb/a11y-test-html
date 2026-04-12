@@ -16,10 +16,9 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
       <form>
-        <!-- DOM error: input without associated label -->
-        <input type="email" placeholder="Your email" />
-        <!-- DOM error: button without accessible name -->
-        <button><span aria-hidden="true">→</span></button>
+        <label for="email">Your email</label>
+        <input id="email" type="email" placeholder="name@example.com" />
+        <button type="submit">Send</button>
       </form>
     </main>
     <script src="./script.js"></script>
