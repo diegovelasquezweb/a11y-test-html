@@ -16,19 +16,23 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
       <form>
-        <!-- PAT: placeholder-only-label — no associated label -->
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
+        <!-- PAT: placeholder-only-label — now with associated label -->
+        <label for="name">Your name</label>
+        <input id="name" type="text" placeholder="Your name" />
+        
+        <label for="email">Your email</label>
+        <input id="email" type="email" placeholder="Your email" />
 
-        <!-- DOM: select without label -->
-        <select>
+        <!-- DOM: select now with label -->
+        <label for="topic">Choose a topic</label>
+        <select id="topic" name="topic">
           <option value="">Choose a topic</option>
           <option value="support">Support</option>
           <option value="sales">Sales</option>
         </select>
 
-        <!-- DOM: button without accessible name -->
-        <button type="submit"><span aria-hidden="true">→</span></button>
+        <!-- DOM: button now with accessible name -->
+        <button type="submit">Submit</button>
       </form>
     </main>
     <script src="./script.js"></script>

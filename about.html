@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content" style="position: absolute; left: -9999px; top: 0; z-index: 9999; padding: 8px 16px; background: #000; color: #fff; text-decoration: none;">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <main id="main" class="page">
+    <main id="main-content" class="page">
       <h1>About Us</h1>
       <p>Founded in 2020, we are a team of engineers passionate about the open web.</p>
 
       <!-- PAT: new-window-no-warning — target="_blank" without rel or warning -->
-      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank">W3C WAI website</a>.</p>
+      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C WAI website <span aria-label="opens in new tab">(opens in new tab)</span></a>.</p>
 
       <!-- PAT: focus-outline-suppressed — inline outline:none -->
-      <button style="outline: none; background: #0070f3; color: white; padding: 8px 16px;">Subscribe</button>
+      <button style="background: #0070f3; color: white; padding: 8px 16px;">Subscribe</button>
 
       <!-- DOM: image used as link with no alt -->
-      <a href="/blog"><img src="blog-banner.png" /></a>
+      <a href="/blog"><img src="blog-banner.png" alt="Read our blog" /></a>
     </main>
     <script src="./script.js"></script>
   </body>

@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content" style="position: absolute; left: -9999px; top: 0; z-index: 9999; padding: 8px 16px; background: #000; color: #fff; text-decoration: none;">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <main id="main" class="page">
+    <main id="main-content" class="page">
       <h1>Welcome</h1>
       <p>This is the home page of the a11y test site.</p>
 
       <!-- DOM: image without alt text -->
-      <img src="hero.png" />
+      <img src="hero.png" alt="Hero banner showcasing the a11y test site" />
 
       <!-- DOM: link with no accessible name -->
-      <a href="/dashboard"><span aria-hidden="true">→</span></a>
+      <a href="/dashboard">View Dashboard</a>
 
       <!-- DOM: heading order skip (h1 → h4) -->
       <h4>Our Mission</h4>
