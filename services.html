@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -14,7 +15,7 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <main class="page">
+    <main class="page" id="main-content">
       <h1>Services</h1>
       <p class="intro">We offer accessibility audits, remediation, and training for development teams.</p>
 
@@ -25,9 +26,9 @@
         <li>Ongoing Monitoring</li>
       </ul>
 
-      <img src="services.png" />
+      <img src="services.png" alt="Services offered including WCAG audits, automated testing, developer training, and ongoing monitoring" />
 
-      <button><span aria-hidden="true">★</span></button>
+      <button aria-label="Add to favorites"><span aria-hidden="true">★</span></button>
     </main>
   </body>
 </html>

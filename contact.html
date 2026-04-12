@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -14,7 +15,7 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <main class="page">
+    <main class="page" id="main-content">
       <h1>Contact Form</h1>
       <p class="intro">Use this form to get in touch with us.</p>
 
@@ -25,6 +26,7 @@
         </div>
 
         <div class="field">
+          <label for="email">Email address</label>
           <input
             id="email"
             name="email"
@@ -36,6 +38,7 @@
         </div>
 
         <div class="field">
+          <label for="topic" class="sr-only">Topic</label>
           <select id="topic" name="topic">
             <option value="">Choose a topic</option>
             <option value="support">Support</option>
@@ -48,7 +51,7 @@
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
-        <button type="submit"><span aria-hidden="true">→</span></button>
+        <button type="submit" aria-label="Send message"><span aria-hidden="true">→</span></button>
 
         <p id="form-status" class="status" role="status" aria-live="polite"></p>
       </form>
