@@ -18,7 +18,8 @@
       <form>
         <label for="email">Your email</label>
         <input id="email" type="email" placeholder="name@example.com" />
-        <button type="submit">Send</button>
+        <!-- DOM: button without accessible name -->
+        <button><span aria-hidden="true">→</span></button>
       </form>
     </main>
     <script src="./script.js"></script>
