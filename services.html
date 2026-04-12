@@ -16,10 +16,15 @@
     <main id="main" class="page">
       <h1>Services</h1>
       <p>We offer accessibility audits, remediation, and training.</p>
+
+      <!-- PAT: mouseover-without-focus — no onFocus equivalent -->
+      <div onMouseOver="showTooltip(this)" style="display:inline-block; padding: 8px; background: #eee;">Hover for info</div>
+
+      <!-- PAT: character-key-shortcut — single-character accesskey -->
+      <button accesskey="s" type="button">Save</button>
+
       <!-- DOM: button without accessible name -->
-      <button><span aria-hidden="true">★</span></button>
-      <!-- PAT: onMouseOver without onFocus -->
-      <div onMouseOver="showTooltip()">Hover me</div>
+      <button type="button"><span aria-hidden="true">★</span></button>
     </main>
     <script src="./script.js"></script>
   </body>
