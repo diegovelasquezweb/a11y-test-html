@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content" style="position: absolute; left: -9999px; top: 0; z-index: 9999; padding: 8px 16px; background: #000; color: #fff;" onFocus="this.style.left='0'" onBlur="this.style.left='-9999px'">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <main id="main" class="page">
+    <main id="main-content" class="page">
       <h1>Contact Us</h1>
       <form>
         <!-- DOM error: input without associated label -->
-        <input type="email" placeholder="Your email" />
+        <label for="email">Your email</label>
+        <input id="email" type="email" placeholder="Your email" aria-labelledby="email-label" />
         <!-- DOM error: button without accessible name -->
-        <button><span aria-hidden="true">→</span></button>
+        <button aria-label="Send"><span aria-hidden="true">→</span></button>
       </form>
     </main>
     <script src="./script.js"></script>
