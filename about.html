@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A11y Test Site</title>
+    <title>About</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -14,10 +14,10 @@
       <a href="contact.html">Contact</a>
     </nav>
     <main id="main" class="page">
-      <h1>Welcome</h1>
-      <p>This is the home page of the a11y test site.</p>
-      <!-- DOM error: image without alt -->
-      <img src="hero.png" />
+      <h1>About Us</h1>
+      <p>Founded in 2020, we are a team of engineers and designers passionate about the open web.</p>
+      <!-- PAT error: target="_blank" without new-tab warning -->
+      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank">W3C WAI website</a>.</p>
     </main>
     <script src="./script.js"></script>
   </body>
