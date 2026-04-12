@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
   </head>
   <body>
     <nav aria-label="Primary">
@@ -16,8 +29,10 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
       <form>
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
+        <label for="name" class="sr-only">Your name</label>
+        <input id="name" type="text" placeholder="Your name" />
+        <label for="email" class="sr-only">Your email</label>
+        <input id="email" type="email" placeholder="Your email" aria-labelledby="email-label" />
         <button type="submit">Send</button>
       </form>
     </main>
