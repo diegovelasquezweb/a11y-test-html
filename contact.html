@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" style="position: absolute; left: -9999px; top: 0; z-index: 9999; padding: 8px 16px; background: #000; color: #fff;">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -16,7 +17,7 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
       <form>
-        <label for="email">Your email</label>
+        <label for="email" style="display: block; margin-bottom: 8px;">Your email</label>
         <input id="email" type="email" placeholder="name@example.com" />
         <button type="submit">Send</button>
       </form>
