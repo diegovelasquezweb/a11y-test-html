@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A11y Test Site</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -17,7 +33,7 @@
       <h1>Welcome</h1>
       <p>This is the home page of the a11y test site.</p>
       <!-- DOM error: image without alt -->
-      <img src="hero.png" />
+      <img src="hero.png" alt="Hero banner for the A11y Test Site" />
     </main>
     <script src="./script.js"></script>
   </body>
