@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      button:focus-visible {
+        outline: 2px solid #4A90E2;
+        outline-offset: 2px;
+      }
+    </style>
   </head>
   <body>
+    <a class="skip-link" href="#main" style="position: absolute; left: -9999px; top: 0; z-index: 9999; padding: 8px 16px; background: #000; color: #fff;" onFocus="this.style.left='0'" onBlur="this.style.left='-9999px'">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -17,9 +24,9 @@
       <h1>About Us</h1>
       <p>Founded in 2020, we are a team of engineers and designers passionate about the open web.</p>
       <!-- PAT: new-window-no-warning -->
-      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank">W3C WAI website</a>.</p>
+      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer" aria-label="W3C WAI website (opens in new tab)">W3C WAI website</a>.</p>
       <!-- PAT: focus-outline-suppressed -->
-      <button style="outline: none; padding: 8px 16px;">Learn more</button>
+      <button style="padding: 8px 16px;">Learn more</button>
     </main>
     <script src="./script.js"></script>
   </body>
