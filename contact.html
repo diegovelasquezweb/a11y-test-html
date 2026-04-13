@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -16,10 +17,11 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
       <form>
-        <!-- DOM error: input without associated label -->
+        <!-- PAT: placeholder-only-label × 3 (input text, input email, textarea) -->
+        <input type="text" placeholder="Your name" />
         <input type="email" placeholder="Your email" />
-        <!-- DOM error: button without accessible name -->
-        <button><span aria-hidden="true">→</span></button>
+        <textarea placeholder="Your message"></textarea>
+        <button type="submit">Send</button>
       </form>
     </main>
     <script src="./script.js"></script>

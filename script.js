@@ -19,3 +19,13 @@ if (form instanceof HTMLFormElement && status instanceof HTMLElement) {
     form.reset();
   });
 }
+
+// PAT: spa-route-title — navigate() without updating document.title
+function goToPage(path) {
+  navigate(path);
+}
+
+// PAT: orientation-lock — programmatic screen orientation lock
+function lockToPortrait() {
+  screen.orientation.lock("portrait");
+}
