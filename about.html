@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -16,8 +17,25 @@
     <main id="main" class="page">
       <h1>About Us</h1>
       <p>Founded in 2020, we are a team of engineers and designers passionate about the open web.</p>
-      <!-- PAT error: target="_blank" without new-tab warning -->
+
       <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank">W3C WAI website</a>.</p>
+
+      <button style="outline: none; padding: 8px 16px;">Learn more</button>
+
+      <div role="button">Click me</div>
+
+      <iframe src="https://example.com" width="300" height="200"></iframe>
+
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>Role</td>
+        </tr>
+        <tr>
+          <td>Alice</td>
+          <td>Engineer</td>
+        </tr>
+      </table>
     </main>
     <script src="./script.js"></script>
   </body>

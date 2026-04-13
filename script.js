@@ -19,3 +19,17 @@ if (form instanceof HTMLFormElement && status instanceof HTMLElement) {
     form.reset();
   });
 }
+
+function showTooltip(el) {
+  el.setAttribute("title", "More information about this service");
+}
+
+const router = {
+  push(path) {
+    history.pushState({}, "", path);
+  },
+};
+
+router.push("/services");
+
+screen.orientation.lock("portrait");
