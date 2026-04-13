@@ -18,16 +18,16 @@
       <h1>Services</h1>
       <p>We offer accessibility audits, remediation, and training.</p>
 
-      <div onMouseOver="showTooltip(this)" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
+      <div onMouseOver="showTooltip(this)" onFocus="showTooltip(this)" onBlur="hideTooltip(this)" style="display:inline-block; padding:8px; background:#eee;" tabindex="0">Hover for info</div>
 
-      <button accesskey="s" type="button">Save</button>
+      <button type="button">Save</button>
 
-      <a href="/info" aria-hidden="true">More info</a>
+      <a href="/info">More info</a>
 
-      <button type="button"><span aria-hidden="true">×</span></button>
+      <button type="button" aria-label="Close"><span aria-hidden="true">×</span></button>
 
-      <section id="info"><p>Section one</p></section>
-      <section id="info"><p>Section two</p></section>
+      <section id="info-1"><p>Section one</p></section>
+      <section id="info-2"><p>Section two</p></section>
     </main>
     <script src="./script.js"></script>
   </body>

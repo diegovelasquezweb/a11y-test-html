@@ -17,24 +17,36 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
 
-      <h2></h2>
+      <h2>Get in Touch</h2>
 
       <ul>
-        <div>Phone: 555-0100</div>
-        <div>Email: hello@example.com</div>
+        <li>Phone: 555-0100</li>
+        <li>Email: hello@example.com</li>
       </ul>
 
       <form>
-        <select>
-          <option value="">Choose a topic</option>
-          <option value="support">Support</option>
-          <option value="sales">Sales</option>
-        </select>
+        <div>
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="">Choose a topic</option>
+            <option value="support">Support</option>
+            <option value="sales">Sales</option>
+          </select>
+        </div>
 
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
-        <textarea placeholder="Your message"></textarea>
-        <button type="submit">Send</button>
+        <div>
+          <label for="name">Your name</label>
+          <input id="name" type="text" name="name" placeholder="Your name" style="min-width: 44px; min-height: 44px; padding: 0.5rem;" />
+        </div>
+        <div>
+          <label for="email">Your email</label>
+          <input id="email" type="email" name="email" placeholder="Your email" style="min-width: 44px; min-height: 44px; padding: 0.5rem;" />
+        </div>
+        <div>
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" placeholder="Your message" style="min-width: 44px; min-height: 44px; padding: 0.5rem;" aria-labelledby="message"></textarea>
+        </div>
+        <button type="submit" style="min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Send</button>
       </form>
     </main>
     <script src="./script.js"></script>
