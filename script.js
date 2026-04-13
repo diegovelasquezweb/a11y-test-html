@@ -23,9 +23,14 @@ if (form instanceof HTMLFormElement && status instanceof HTMLElement) {
 // PAT: spa-route-title — navigate() without updating document.title
 function goToPage(path) {
   navigate(path);
+  // Update document.title based on the route for screen reader announcement
+  const titles = {
+    '/': 'Home',
+    '/about': 'About',
+    '/contact': 'Contact',
+    '/services': 'Services'
+  };
+  document.title = titles[path] || 'Page';
 }
 
-// PAT: orientation-lock — programmatic screen orientation lock
-function lockToPortrait() {
-  screen.orientation.lock("portrait");
-}
+

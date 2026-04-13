@@ -17,20 +17,21 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
 
-      <!-- DOM: empty-heading — heading element with no text content -->
-      <h2></h2>
+      <!-- DOM: empty-heading — removed empty heading element -->
 
-      <!-- DOM: list — ul with invalid div children instead of li -->
+      <!-- DOM: list — converted to proper li elements -->
       <ul>
-        <div>Phone: 555-0100</div>
-        <div>Email: hello@example.com</div>
+        <li>Phone: 555-0100</li>
+        <li>Email: hello@example.com</li>
       </ul>
 
       <form>
-        <!-- PAT: placeholder-only-label × 3 (input text, input email, textarea) -->
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
-        <textarea placeholder="Your message"></textarea>
+        <label for="name">Your name</label>
+        <input id="name" type="text" placeholder="Your name" />
+        <label for="email">Your email</label>
+        <input id="email" type="email" placeholder="Your email" />
+        <label for="message">Your message</label>
+        <textarea id="message" placeholder="Your message" aria-label="Your message"></textarea>
         <button type="submit">Send</button>
       </form>
     </main>
