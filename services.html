@@ -19,20 +19,20 @@
       <p>We offer accessibility audits, remediation, and training.</p>
 
       <!-- PAT: mouseover-without-focus -->
-      <div onMouseOver="showTooltip(this)" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
+      <div onMouseOver="showTooltip(this)" onFocus="showTooltip(this)" onBlur="hideTooltip(this)" tabindex="0" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
 
       <!-- PAT: character-key-shortcut -->
-      <button accesskey="s" type="button">Save</button>
+      <button type="button">Save</button>
 
       <!-- DOM: aria-hidden-focus — focusable element hidden from AT -->
-      <a href="/info" aria-hidden="true">More info</a>
+      <a href="/info">More info</a>
 
       <!-- DOM: button-name — icon-only button with no accessible name -->
-      <button type="button"><span aria-hidden="true">×</span></button>
+      <button type="button" aria-label="Close"><span aria-hidden="true">×</span></button>
 
       <!-- DOM: duplicate-id — two elements share the same id -->
-      <section id="info"><p>Section one</p></section>
-      <section id="info"><p>Section two</p></section>
+      <section id="info-1"><p>Section one</p></section>
+      <section id="info-2"><p>Section two</p></section>
     </main>
     <script src="./script.js"></script>
   </body>

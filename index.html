@@ -20,20 +20,20 @@
       <img src="hero.png" alt="Team working on accessibility" />
 
       <!-- DOM: image-alt — img missing alt attribute -->
-      <img src="decorative-banner.png" />
+      <img src="decorative-banner.png" alt="" />
 
       <!-- DOM: color-contrast — text too light on white background -->
-      <p style="color: #ccc;">This text has insufficient color contrast.</p>
+      <p style="color: #595959;">This text has insufficient color contrast.</p>
 
       <!-- DOM: heading-order — skips h2, jumps directly to h3 -->
       <h3>Our Mission</h3>
       <p>We build accessible experiences for everyone.</p>
 
       <!-- DOM: link-name — empty anchor with no accessible text -->
-      <a href="/more"></a>
+      <a href="/more">Read more about our services</a>
 
       <!-- DOM: lang — invalid language code on child element -->
-      <p lang="xx">Some content in an unrecognized language.</p>
+      <p lang="en">Some content in an unrecognized language.</p>
     </main>
     <script src="./script.js"></script>
   </body>

@@ -18,26 +18,30 @@
       <h1>Contact Us</h1>
 
       <!-- DOM: empty-heading — heading element with no text content -->
-      <h2></h2>
+      <h2>Get in Touch</h2>
 
       <!-- DOM: list — ul with invalid div children instead of li -->
       <ul>
-        <div>Phone: 555-0100</div>
-        <div>Email: hello@example.com</div>
+        <li>Phone: 555-0100</li>
+        <li>Email: hello@example.com</li>
       </ul>
 
       <form>
         <!-- DOM: select-label — select without an associated label -->
-        <select>
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
           <option value="">Choose a topic</option>
           <option value="support">Support</option>
           <option value="sales">Sales</option>
         </select>
 
         <!-- PAT: placeholder-only-label × 3 (input text, input email, textarea) -->
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
-        <textarea placeholder="Your message"></textarea>
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" />
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" />
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" placeholder="Your message"></textarea>
         <button type="submit">Send</button>
       </form>
     </main>
