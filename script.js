@@ -23,9 +23,17 @@ if (form instanceof HTMLFormElement && status instanceof HTMLElement) {
 // PAT: spa-route-title — navigate() without updating document.title
 function goToPage(path) {
   navigate(path);
+  // Update document title to reflect the new route for screen reader users
+  const routeTitles = {
+    '/': 'Home',
+    '/about': 'About',
+    '/contact': 'Contact',
+    '/services': 'Services'
+  };
+  document.title = routeTitles[path] || 'Page';
 }
 
-// PAT: orientation-lock — programmatic screen orientation lock
-function lockToPortrait() {
-  screen.orientation.lock("portrait");
-}
+// Removed: programmatic screen orientation lock.
+// Users should control their device orientation. If portrait-only layout is needed,
+// use CSS media queries (@media (orientation: portrait)) to provide responsive design
+// that works in both orientations.
