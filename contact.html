@@ -9,31 +9,35 @@
   <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <nav aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Home</a>
+      <a href="about.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">About</a>
+      <a href="services.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Services</a>
+      <a href="contact.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Contact</a>
     </nav>
     <main id="main" class="page">
       <h1>Contact Us</h1>
 
-      <h2></h2>
+      <h2>Contact Information</h2>
 
       <ul>
-        <div>Phone: 555-0100</div>
-        <div>Email: hello@example.com</div>
+        <li>Phone: 555-0100</li>
+        <li>Email: hello@example.com</li>
       </ul>
 
       <form>
-        <select>
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
           <option value="">Choose a topic</option>
           <option value="support">Support</option>
           <option value="sales">Sales</option>
         </select>
 
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
-        <textarea placeholder="Your message"></textarea>
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" />
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" />
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" placeholder="Your message"></textarea>
         <button type="submit">Send</button>
       </form>
     </main>
