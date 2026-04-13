@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -16,8 +17,18 @@
     <main id="main" class="page">
       <h1>Welcome</h1>
       <p>This is the home page of the a11y test site.</p>
-      <!-- DOM error: image without alt -->
-      <img src="hero.png" />
+      <img src="hero.png" alt="Team working on accessibility" />
+
+      <img src="decorative-banner.png" />
+
+      <p style="color: #ccc;">This text has insufficient color contrast.</p>
+
+      <h3>Our Mission</h3>
+      <p>We build accessible experiences for everyone.</p>
+
+      <a href="/more"></a>
+
+      <p lang="xx">Some content in an unrecognized language.</p>
     </main>
     <script src="./script.js"></script>
   </body>
