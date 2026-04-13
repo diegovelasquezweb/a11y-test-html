@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" style="position: absolute; left: -9999px; top: 0; z-index: 9999; padding: 8px 16px; background: #000; color: #fff; text-decoration: none;">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -18,13 +19,13 @@
       <p>This is the home page of the a11y test site.</p>
 
       <!-- DOM: image without alt -->
-      <img src="hero.png" />
+      <img src="hero.png" alt="Hero banner image" />
 
       <!-- DOM: image inside link without alt (link has no accessible name) -->
-      <a href="about.html"><img src="about-preview.png" /></a>
+      <a href="about.html"><img src="about-preview.png" alt="About Us page preview" /></a>
 
       <!-- DOM: empty link -->
-      <a href="services.html"></a>
+      <a href="services.html">Services</a>
 
       <!-- DOM: heading skip h1 -> h4 -->
       <h4>Featured</h4>

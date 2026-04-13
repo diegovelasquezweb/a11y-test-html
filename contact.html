@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" style="position: absolute; left: -9999px; top: 0; z-index: 9999; padding: 8px 16px; background: #000; color: #fff; text-decoration: none;">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -17,21 +18,25 @@
       <h1>Contact Us</h1>
       <form>
         <!-- PAT: placeholder-only-label × 2 -->
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
+        <label for="contact-name">Your name</label>
+        <input id="contact-name" type="text" placeholder="Your name" aria-labelledby="contact-name" />
+        <label for="contact-email">Your email</label>
+        <input id="contact-email" type="email" placeholder="Your email" aria-labelledby="contact-email" />
 
         <!-- DOM: select without label -->
-        <select>
+        <label for="contact-topic">Choose a topic</label>
+        <select id="contact-topic" style="min-height: 24px;">
           <option value="">Choose a topic</option>
           <option value="support">Support</option>
           <option value="sales">Sales</option>
         </select>
 
         <!-- DOM: textarea without label -->
-        <textarea placeholder="Your message"></textarea>
+        <label for="contact-message">Your message</label>
+        <textarea id="contact-message" placeholder="Your message" aria-labelledby="contact-message"></textarea>
 
         <!-- DOM: button without accessible name -->
-        <button type="submit"><span aria-hidden="true">→</span></button>
+        <button type="submit" style="min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;" aria-label="Submit contact form"><span aria-hidden="true">→</span></button>
       </form>
     </main>
     <script src="./script.js"></script>

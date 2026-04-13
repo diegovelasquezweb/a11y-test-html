@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" style="position: absolute; left: -9999px; top: 0; z-index: 9999; padding: 8px 16px; background: #000; color: #fff; text-decoration: none;">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -18,10 +19,16 @@
       <p>Founded in 2020, we are a team of engineers and designers passionate about the open web.</p>
 
       <!-- PAT: new-window-no-warning -->
-      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank">W3C WAI website</a>.</p>
+      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C WAI website <span aria-label="opens in new tab">(opens in new tab)</span></a>.</p>
 
       <!-- PAT: focus-outline-suppressed -->
-      <button style="outline: none; padding: 8px 16px;">Learn more</button>
+      <button style="padding: 8px 16px;">Learn more</button>
+      <style>
+        button:focus-visible {
+          outline: 2px solid #4A90E2;
+          outline-offset: 2px;
+        }
+      </style>
 
       <!-- DOM: heading skip h1 -> h3 -->
       <h3>Our Mission</h3>
@@ -33,7 +40,7 @@
       </video>
 
       <!-- DOM: image with empty alt on a decorative image that is also a link -->
-      <a href="team.html"><img src="team.png" alt="" /></a>
+      <a href="team.html">View our team</a>
     </main>
     <script src="./script.js"></script>
   </body>

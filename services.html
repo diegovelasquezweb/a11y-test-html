@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" style="position: absolute; left: -9999px; top: 0; z-index: 9999; padding: 8px 16px; background: #000; color: #fff; text-decoration: none;">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -18,16 +19,16 @@
       <p>We offer accessibility audits, remediation, and training.</p>
 
       <!-- PAT: mouseover-without-focus -->
-      <div onMouseOver="showTooltip(this)" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
+      <div onMouseOver="showTooltip(this)" onFocus="showTooltip(this)" onBlur="hideTooltip(this)" tabindex="0" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
 
       <!-- PAT: character-key-shortcut -->
-      <button accesskey="s" type="button">Save</button>
+      <button type="button">Save</button>
 
       <!-- DOM: button without accessible name (icon only) -->
-      <button type="button"><span aria-hidden="true">★</span></button>
+      <button type="button" aria-label="Add to favorites"><span aria-hidden="true">★</span></button>
 
       <!-- DOM: iframe without title -->
-      <iframe src="https://example.com" width="400" height="200"></iframe>
+      <iframe title="Example embedded content" src="https://example.com" width="400" height="200"></iframe>
 
       <!-- DOM: table without headers -->
       <table>
@@ -42,7 +43,8 @@
       </table>
 
       <!-- DOM: input with no label (not placeholder — just bare) -->
-      <input type="search" />
+      <label for="service-search">Search services</label>
+      <input id="service-search" type="search" />
     </main>
     <script src="./script.js"></script>
   </body>
