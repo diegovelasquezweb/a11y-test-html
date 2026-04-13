@@ -24,12 +24,16 @@ function showTooltip(el) {
   el.setAttribute("title", "More information about this service");
 }
 
+const routeTitles = {
+  "/services": "Services",
+  "/": "Home",
+};
+
 const router = {
   push(path) {
     history.pushState({}, "", path);
+    document.title = routeTitles[path] || "Page";
   },
 };
 
 router.push("/services");
-
-screen.orientation.lock("portrait");
