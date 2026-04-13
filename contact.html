@@ -16,9 +16,22 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
       <form>
+        <!-- PAT: placeholder-only-label × 2 -->
         <input type="text" placeholder="Your name" />
         <input type="email" placeholder="Your email" />
-        <button type="submit">Send</button>
+
+        <!-- DOM: select without label -->
+        <select>
+          <option value="">Choose a topic</option>
+          <option value="support">Support</option>
+          <option value="sales">Sales</option>
+        </select>
+
+        <!-- DOM: textarea without label -->
+        <textarea placeholder="Your message"></textarea>
+
+        <!-- DOM: button without accessible name -->
+        <button type="submit"><span aria-hidden="true">→</span></button>
       </form>
     </main>
     <script src="./script.js"></script>

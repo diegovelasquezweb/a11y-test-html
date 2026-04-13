@@ -16,8 +16,22 @@
     <main id="main" class="page">
       <h1>Welcome</h1>
       <p>This is the home page of the a11y test site.</p>
-      <!-- DOM error: image without alt -->
+
+      <!-- DOM: image without alt -->
       <img src="hero.png" />
+
+      <!-- DOM: image inside link without alt (link has no accessible name) -->
+      <a href="about.html"><img src="about-preview.png" /></a>
+
+      <!-- DOM: empty link -->
+      <a href="services.html"></a>
+
+      <!-- DOM: heading skip h1 -> h4 -->
+      <h4>Featured</h4>
+      <p>Our top services.</p>
+
+      <!-- DOM: div acting as button without role or tabindex -->
+      <div onclick="alert('clicked')" style="cursor:pointer; padding:8px; background:#ddd;">Click me</div>
     </main>
     <script src="./script.js"></script>
   </body>

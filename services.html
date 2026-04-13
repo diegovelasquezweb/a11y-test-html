@@ -16,10 +16,33 @@
     <main id="main" class="page">
       <h1>Services</h1>
       <p>We offer accessibility audits, remediation, and training.</p>
+
       <!-- PAT: mouseover-without-focus -->
       <div onMouseOver="showTooltip(this)" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
+
       <!-- PAT: character-key-shortcut -->
       <button accesskey="s" type="button">Save</button>
+
+      <!-- DOM: button without accessible name (icon only) -->
+      <button type="button"><span aria-hidden="true">★</span></button>
+
+      <!-- DOM: iframe without title -->
+      <iframe src="https://example.com" width="400" height="200"></iframe>
+
+      <!-- DOM: table without headers -->
+      <table>
+        <tr>
+          <td>Audit</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+          <td>Remediation</td>
+          <td>$1200</td>
+        </tr>
+      </table>
+
+      <!-- DOM: input with no label (not placeholder — just bare) -->
+      <input type="search" />
     </main>
     <script src="./script.js"></script>
   </body>

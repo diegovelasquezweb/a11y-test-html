@@ -16,10 +16,24 @@
     <main id="main" class="page">
       <h1>About Us</h1>
       <p>Founded in 2020, we are a team of engineers and designers passionate about the open web.</p>
+
       <!-- PAT: new-window-no-warning -->
       <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank">W3C WAI website</a>.</p>
+
       <!-- PAT: focus-outline-suppressed -->
       <button style="outline: none; padding: 8px 16px;">Learn more</button>
+
+      <!-- DOM: heading skip h1 -> h3 -->
+      <h3>Our Mission</h3>
+      <p>Make the web accessible to everyone.</p>
+
+      <!-- DOM: video without captions (track element missing) -->
+      <video src="intro.mp4" controls width="400">
+        <p>Your browser does not support the video element.</p>
+      </video>
+
+      <!-- DOM: image with empty alt on a decorative image that is also a link -->
+      <a href="team.html"><img src="team.png" alt="" /></a>
     </main>
     <script src="./script.js"></script>
   </body>
