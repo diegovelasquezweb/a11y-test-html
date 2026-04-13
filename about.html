@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <main id="main" class="page">
+    <main id="main-content" class="page">
       <h1>About Us</h1>
       <p>Founded in 2020, we are a team of engineers and designers passionate about the open web.</p>
 
       <!-- PAT: new-window-no-warning -->
-      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank">W3C WAI website</a>.</p>
+      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C WAI website (opens in new tab)</a>.</p>
 
       <!-- PAT: focus-outline-suppressed -->
       <button style="outline: none; padding: 8px 16px;">Learn more</button>
@@ -33,8 +34,22 @@
       </video>
 
       <!-- DOM: image with empty alt on a decorative image that is also a link -->
-      <a href="team.html"><img src="team.png" alt="" /></a>
+      <a href="team.html"><img src="team.png" alt="View our team" /></a>
     </main>
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
     <script src="./script.js"></script>
   </body>
 </html>

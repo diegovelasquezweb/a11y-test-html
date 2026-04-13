@@ -1,12 +1,23 @@
 // PAT: spa-route-title — navigate() called without updating document.title
 function goToPage(path) {
   navigate(path);
+  const pageTitle = getTitleForPath(path);
+  if (pageTitle) {
+    document.title = pageTitle;
+  }
 }
 
-// PAT: orientation-lock — programmatic orientation lock
-function lockToPortrait() {
-  screen.orientation.lock("portrait");
+function getTitleForPath(path) {
+  const titles = {
+    '/': 'Home',
+    '/about': 'About',
+    '/contact': 'Contact',
+    '/services': 'Services'
+  };
+  return titles[path] || 'Page';
 }
+
+
 
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");

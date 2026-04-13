@@ -7,33 +7,52 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <main id="main" class="page">
+    <main id="main-content" class="page">
       <h1>Contact Us</h1>
       <form>
         <!-- PAT: placeholder-only-label × 2 -->
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
+        <label for="name">Your name</label>
+        <input id="name" type="text" placeholder="Your name" />
+        <label for="email">Your email</label>
+        <input id="email" type="email" placeholder="Your email" />
 
         <!-- DOM: select without label -->
-        <select>
+        <label for="topic">Choose a topic</label>
+        <select id="topic" style="min-width: 44px; min-height: 44px;">
           <option value="">Choose a topic</option>
           <option value="support">Support</option>
           <option value="sales">Sales</option>
         </select>
 
         <!-- DOM: textarea without label -->
-        <textarea placeholder="Your message"></textarea>
+        <label for="message">Your message</label>
+        <textarea id="message" placeholder="Your message" aria-labelledby="message-label"></textarea>
 
         <!-- DOM: button without accessible name -->
-        <button type="submit"><span aria-hidden="true">→</span></button>
+        <button type="submit" aria-label="Send message"><span aria-hidden="true">→</span></button>
       </form>
     </main>
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <main id="main" class="page">
+    <main id="main-content" class="page">
       <h1>Welcome</h1>
       <p>This is the home page of the a11y test site.</p>
 
       <!-- DOM: image without alt -->
-      <img src="hero.png" />
+      <img src="hero.png" alt="Hero image showcasing company services" />
 
       <!-- DOM: image inside link without alt (link has no accessible name) -->
-      <a href="about.html"><img src="about-preview.png" /></a>
+      <a href="about.html"><img src="about-preview.png" alt="About Us preview" /></a>
 
       <!-- DOM: empty link -->
-      <a href="services.html"></a>
+      <a href="services.html">Our Services</a>
 
       <!-- DOM: heading skip h1 -> h4 -->
       <h4>Featured</h4>
@@ -33,6 +34,20 @@
       <!-- DOM: div acting as button without role or tabindex -->
       <div onclick="alert('clicked')" style="cursor:pointer; padding:8px; background:#ddd;">Click me</div>
     </main>
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
     <script src="./script.js"></script>
   </body>
 </html>

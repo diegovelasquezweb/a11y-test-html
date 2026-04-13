@@ -7,27 +7,28 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <main id="main" class="page">
+    <main id="main-content" class="page">
       <h1>Services</h1>
       <p>We offer accessibility audits, remediation, and training.</p>
 
       <!-- PAT: mouseover-without-focus -->
-      <div onMouseOver="showTooltip(this)" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
+      <div onMouseOver="showTooltip(this)" onFocus="showTooltip(this)" onBlur="hideTooltip(this)" tabindex="0" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
 
       <!-- PAT: character-key-shortcut -->
-      <button accesskey="s" type="button">Save</button>
+      <button type="button">Save</button>
 
       <!-- DOM: button without accessible name (icon only) -->
-      <button type="button"><span aria-hidden="true">★</span></button>
+      <button type="button" aria-label="Add to favorites"><span aria-hidden="true">★</span></button>
 
       <!-- DOM: iframe without title -->
-      <iframe src="https://example.com" width="400" height="200"></iframe>
+      <iframe title="External service information" src="https://example.com" width="400" height="200"></iframe>
 
       <!-- DOM: table without headers -->
       <table>
@@ -42,8 +43,23 @@
       </table>
 
       <!-- DOM: input with no label (not placeholder — just bare) -->
-      <input type="search" />
+      <label for="search-input">Search services</label>
+      <input id="search-input" type="search" />
     </main>
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 9999;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
     <script src="./script.js"></script>
   </body>
 </html>
