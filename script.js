@@ -23,9 +23,12 @@ if (form instanceof HTMLFormElement && status instanceof HTMLElement) {
 // PAT: spa-route-title — navigate() without updating document.title
 function goToPage(path) {
   navigate(path);
+  const routeTitles = {
+    "/": "Home",
+    "/about": "About",
+    "/contact": "Contact"
+  };
+  document.title = (routeTitles[path] ? routeTitles[path] + " — My Site" : "My Site");
 }
 
-// PAT: orientation-lock — programmatic screen orientation lock
-function lockToPortrait() {
-  screen.orientation.lock("portrait");
-}
+

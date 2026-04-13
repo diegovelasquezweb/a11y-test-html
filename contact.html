@@ -9,28 +9,30 @@
   <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <nav aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" style="display:inline-block;min-height:24px;padding:4px 0;">Home</a>
+      <a href="about.html" style="display:inline-block;min-height:24px;padding:4px 0;">About</a>
+      <a href="services.html" style="display:inline-block;min-height:24px;padding:4px 0;">Services</a>
+      <a href="contact.html" style="display:inline-block;min-height:24px;padding:4px 0;">Contact</a>
     </nav>
     <main id="main" class="page">
       <h1>Contact Us</h1>
 
       <!-- DOM: empty-heading — heading element with no text content -->
-      <h2></h2>
 
       <!-- DOM: list — ul with invalid div children instead of li -->
       <ul>
-        <div>Phone: 555-0100</div>
-        <div>Email: hello@example.com</div>
+        <li>Phone: 555-0100</li>
+        <li>Email: hello@example.com</li>
       </ul>
 
       <form>
         <!-- PAT: placeholder-only-label × 3 (input text, input email, textarea) -->
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
-        <textarea placeholder="Your message"></textarea>
+        <label for="contact-name">Your name</label>
+        <input id="contact-name" type="text" placeholder="Your name" autocomplete="name" />
+        <label for="contact-email">Your email</label>
+        <input id="contact-email" type="email" placeholder="Your email" autocomplete="email" />
+        <label for="contact-message">Your message</label>
+        <textarea id="contact-message" placeholder="Your message" aria-label="Your message"></textarea>
         <button type="submit">Send</button>
       </form>
     </main>
