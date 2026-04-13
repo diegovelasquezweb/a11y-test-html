@@ -66,8 +66,7 @@ textarea {
 }
 
 input:focus,
-textarea:focus,
-button:focus {
+textarea:focus {
   outline: 3px solid rgba(15, 94, 201, 0.28);
   outline-offset: 2px;
 }
@@ -80,6 +79,13 @@ button {
   padding: 0.72rem 1rem;
   font-weight: 700;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(15, 94, 201, 0.28);
+  outline-offset: 2px;
 }
 
 .status {
