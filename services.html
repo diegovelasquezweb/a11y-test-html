@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -16,6 +17,19 @@
     <main id="main" class="page">
       <h1>Services</h1>
       <p>We offer accessibility audits, remediation, and training.</p>
+
+      <!-- PAT: mouseover-without-focus -->
+      <div onMouseOver="showTooltip(this)" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
+
+      <!-- PAT: character-key-shortcut -->
+      <button accesskey="s" type="button">Save</button>
+
+      <!-- DOM: button-name — icon-only button with no accessible name -->
+      <button type="button"><span aria-hidden="true">×</span></button>
+
+      <!-- DOM: duplicate-id — two elements share the same id -->
+      <section id="info"><p>Section one</p></section>
+      <section id="info"><p>Section two</p></section>
     </main>
     <script src="./script.js"></script>
   </body>
