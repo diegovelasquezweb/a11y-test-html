@@ -23,6 +23,13 @@
 
       <!-- PAT: character-key-shortcut -->
       <button accesskey="s" type="button">Save</button>
+
+      <!-- DOM: button-name — icon-only button with no accessible name -->
+      <button type="button"><span aria-hidden="true">×</span></button>
+
+      <!-- DOM: duplicate-id — two elements share the same id -->
+      <section id="info"><p>Section one</p></section>
+      <section id="info"><p>Section two</p></section>
     </main>
     <script src="./script.js"></script>
   </body>
