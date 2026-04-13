@@ -9,20 +9,26 @@
   <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <nav aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Home</a>
+      <a href="about.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">About</a>
+      <a href="services.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Services</a>
+      <a href="contact.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Contact</a>
     </nav>
     <main id="main" class="page">
       <h1>About Us</h1>
       <p>Founded in 2020, we are a team of engineers and designers passionate about the open web.</p>
 
       <!-- PAT: new-window-no-warning -->
-      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank">W3C WAI website</a>.</p>
+      <p>Read more on the <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C WAI website (opens in new tab)</a>.</p>
 
       <!-- PAT: focus-outline-suppressed -->
-      <button style="outline: none; padding: 8px 16px;">Learn more</button>
+      <button style="padding: 8px 16px;" class="learn-more-btn">Learn more</button>
+    <style>
+      .learn-more-btn:focus-visible {
+        outline: 2px solid #0066cc;
+        outline-offset: 2px;
+      }
+    </style>
     </main>
     <script src="./script.js"></script>
   </body>

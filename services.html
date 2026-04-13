@@ -9,20 +9,20 @@
   <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <nav aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Home</a>
+      <a href="about.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">About</a>
+      <a href="services.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Services</a>
+      <a href="contact.html" style="display: inline-block; min-width: 44px; min-height: 44px; padding: 0.5rem 1rem;">Contact</a>
     </nav>
     <main id="main" class="page">
       <h1>Services</h1>
       <p>We offer accessibility audits, remediation, and training.</p>
 
       <!-- PAT: mouseover-without-focus -->
-      <div onMouseOver="showTooltip(this)" style="display:inline-block; padding:8px; background:#eee;">Hover for info</div>
+      <div onMouseOver="showTooltip(this)" onFocus="showTooltip(this)" onBlur="hideTooltip(this)" style="display:inline-block; padding:8px; background:#eee;" tabindex="0">Hover for info</div>
 
       <!-- PAT: character-key-shortcut -->
-      <button accesskey="s" type="button">Save</button>
+      <button type="button">Save</button>
     </main>
     <script src="./script.js"></script>
   </body>
