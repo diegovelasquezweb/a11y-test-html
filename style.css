@@ -58,16 +58,17 @@ button {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.65rem 0.75rem;
+  min-height: 44px;
 }
 
 input:focus,
-textarea:focus,
-button:focus {
+textarea:focus {
   outline: 3px solid rgba(15, 94, 201, 0.28);
   outline-offset: 2px;
 }
@@ -80,6 +81,25 @@ button {
   padding: 0.72rem 1rem;
   font-weight: 700;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(15, 94, 201, 0.28);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .status {

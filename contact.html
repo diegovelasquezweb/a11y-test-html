@@ -17,23 +17,35 @@
     <main id="main" class="page">
       <h1>Contact Us</h1>
 
-      <h2></h2>
+      <h2>Get in Touch</h2>
 
       <ul>
-        <div>Phone: 555-0100</div>
-        <div>Email: hello@example.com</div>
+        <li>Phone: 555-0100</li>
+        <li>Email: hello@example.com</li>
       </ul>
 
-      <form>
-        <select>
-          <option value="">Choose a topic</option>
-          <option value="support">Support</option>
-          <option value="sales">Sales</option>
-        </select>
+      <form class="form">
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="">Choose a topic</option>
+            <option value="support">Support</option>
+            <option value="sales">Sales</option>
+          </select>
+        </div>
 
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
-        <textarea placeholder="Your message"></textarea>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" type="text" name="name" placeholder="Your name" />
+        </div>
+        <div class="field">
+          <label for="email">Your email</label>
+          <input id="email" type="email" name="email" placeholder="Your email" />
+        </div>
+        <div class="field">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" placeholder="Your message" aria-label="Your message"></textarea>
+        </div>
         <button type="submit">Send</button>
       </form>
     </main>
