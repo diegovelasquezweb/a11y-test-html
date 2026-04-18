@@ -27,9 +27,18 @@ function showTooltip(el) {
 const router = {
   push(path) {
     history.pushState({}, "", path);
+    updatePageTitle(path);
   },
 };
 
-router.push("/services");
+function updatePageTitle(path) {
+  const titles = {
+    "/services": "Services",
+    "/": "Home",
+    "/about": "About",
+    "/contact": "Contact",
+  };
+  document.title = titles[path] || "Page";
+}
 
-screen.orientation.lock("portrait");
+router.push("/services");
