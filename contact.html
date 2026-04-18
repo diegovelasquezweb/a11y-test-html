@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -15,11 +16,37 @@
     </nav>
     <main id="main" class="page">
       <h1>Contact Us</h1>
-      <form>
-        <!-- DOM error: input without associated label -->
-        <input type="email" placeholder="Your email" />
-        <!-- DOM error: button without accessible name -->
-        <button><span aria-hidden="true">→</span></button>
+
+      <h2>Get in Touch</h2>
+
+      <ul>
+        <li>Phone: 555-0100</li>
+        <li>Email: hello@example.com</li>
+      </ul>
+
+      <form class="form">
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="">Choose a topic</option>
+            <option value="support">Support</option>
+            <option value="sales">Sales</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" type="text" name="name" placeholder="Your name" />
+        </div>
+        <div class="field">
+          <label for="email">Your email</label>
+          <input id="email" type="email" name="email" placeholder="Your email" />
+        </div>
+        <div class="field">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" placeholder="Your message" aria-label="Your message"></textarea>
+        </div>
+        <button type="submit">Send</button>
       </form>
     </main>
     <script src="./script.js"></script>
